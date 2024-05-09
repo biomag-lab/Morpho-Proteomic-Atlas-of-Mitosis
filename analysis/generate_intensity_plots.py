@@ -9,8 +9,9 @@ import validation_experiment
 """
 set the feature name to extract from the headers of the csv
 """
-path = "e:/DVP2/CODE from hydra/koosk/output/BIAS-DVP2-RNA-val20230926/"
-file = "validation-exp-230926.csv"
+path = "./data/"
+file = "proteomics_image_features.csv"
+file = "validation_image_features.csv"
 
 features_to_extract = ['CYTO INTENSITY-MEAN Alexa 647', 'CYTO INTENSITY-MEDIAN Alexa 647'
     , 'CYTO INTENSITY-INTEGRATED Alexa 647']
@@ -56,15 +57,7 @@ if __name__ == '__main__':
             # removing cutting strings from phases
             slide = slide.replace('-cutting', '', regex=True)
             seaborn.set(style='whitegrid')
-            # mine
-            # swarmplot = seaborn.swarmplot(data=slide, x=slide['phase'], y=slide[feature_name],
-            #                               palette=seaborn.color_palette(normalized_colors),
-            #                               alpha=.7,size=6)
-            #
-            # swarmplot = seaborn.stripplot(data=slide, x=slide['phase'], y=slide[feature_name],
-            #                                palette=seaborn.color_palette(normalized_colors),
-            #                                jitter=0.3, marker="o", alpha=0.7)
-            # Nikitas
+
             swarmplot = seaborn.boxplot(data=slide, x=slide['phase'], y=slide[feature_name],
                                         palette=seaborn.color_palette(normalized_colors),
                                         width=.2, showfliers=False)
@@ -72,14 +65,6 @@ if __name__ == '__main__':
             swarmplot = seaborn.stripplot(data=slide, x=slide['phase'], y=slide[feature_name],
                                           palette=seaborn.color_palette(normalized_colors),
                                           jitter=0.3, marker="o", alpha=0.7)
-            # swarmplot = seaborn.violinplot(data=slide, x=slide['phase'], y=slide[feature_name],
-            #                    palette=seaborn.color_palette(normalized_colors),
-            #                    inner=None, color="lightgray", linewidth=0)
-            #
-            # # Add a swarm plot on top of the violin plot
-            # swarmplot =seaborn.swarmplot(data=slide, x=slide['phase'], y=slide[feature_name],
-            #                 palette=seaborn.color_palette(normalized_colors),
-            #                   color="blue", size=3)
 
             seaborn.scatterplot(slide_averages[c], palette=['black'], zorder=100,
                                 legend=None)
@@ -102,8 +87,4 @@ if __name__ == '__main__':
             fig.savefig(f"{feature_name}/{filename_str}")
 
             plt.close()
-            # MATPLOT LIB ORIGINAL
-            # plt.plot(slide)
-            # plt.title(groupkeyslist[c])
-            # plt.savefig(f"{feature_name}/{groupkeyslist[c]}_{feature_name}.png")
-            # plt.close()
+
