@@ -204,3 +204,31 @@ Run dvp2_export.py
 This script will generate small crops for each mitotic cells, and generate a csv files containing 
 all feature calculated by BIAS
 
+# Proteomic Data Analysis
+
+The following paragraphs contains the workflow of the proteomic data analysis, focusing on the detection of proteins whose abundance changes significantly.
+
+## Data Analysis
+
+### Raw Data Processing
+Raw files were analyzed using the [DIA-NN](https://github.com/vdemichev/DiaNN) (version 1.8.1), a neural network-based search engine. The search was performed against the [UniProt database](https://www.uniprot.org) (March 2023 release, UP000005640_9606 and UP000005640_9606_additional), using a library-free approach. Settings included:
+- Fragment and precursor m/z: 100 to 1700
+- Peptide length: 7 to 30 amino acids
+- Precursor charge range: 2 to 4
+- Max number of missed cleavages and variable modifications: 2
+- N-terminal modifications: Methionine excision, oxidation, and N-terminal acetylation
+- Mass accuracy: 1.5e-05 (both MS2 and MS1)
+- Match between runs: Enabled
+- Exclusion: 2 empty raw files
+
+### Data Processing and Visualization
+Out of 123 analyzed samples, three were excluded due to insufficient protein groups (<3000). Using [Perseus](http://www.coxdocs.org/doku.php?id=perseus:start) (v2.0.5.0), 1385 out of 5735 protein groups were removed due to inadequate quantification across samples. Further steps included:
+- Batch correction using [ComBat](https://github.com/Jfortin1/ComBatHarmonization)
+- Contaminant removal with AlphaPeptStats (https://github.com/MannLabs/alphapeptstats)
+- Statistical analysis: Differential abundance and Kruskal–Wallis test between mitotic classes, performed in Perseus
+- Identification of 147 significantly changed proteins across 41 time points
+- Grouping of mitotic subphases for enhanced statistical power
+- Identification of 1060 significantly changed proteins across 14 time points
+
+### Hit Selection
+Proteins with significant expression changes during mitosis were identified using the Kruskal–Wallis test, with false discovery rates (FDR) at 0.1 and 0.05 (Benjamini–Hochberg correction), analyzed in Perseus.
