@@ -4,7 +4,7 @@
 ## Requirements
 
 <ul>
-  <li>OS: doesn't matter</li>
+  <li>OS: compatiable with Windows, Linux, Mac (NVIDIA related features will run only on CPU)</li>
   <li>BIAS lite 1.10 or higher</li>
   <li>Matlab 2022b with deeplearning toolbox</li>
   <li>Python 3.9 requirements.txt included</li>
@@ -15,6 +15,8 @@
 
 ## Install BIAS software:
 
+
+
 Download the lite version of the BIAS software from:
 https://single-cell-technologies.com/download/
 
@@ -23,6 +25,9 @@ Unzip the bias_win_lite_v1.1.0.zip (version might change) into a desired folder 
 C:/BIAS/
 
 Run BIAS.exe
+
+Typically 1-2 minutes to unpack the software, no further installion is required.
+
 
 ## Python enviroment
 Install python 3.9 <br>
@@ -37,7 +42,7 @@ Run
 pip install -r requirments.txt
 
 ```
-
+Typically it takes 5-6 minutes to download and install each packages
 
 
 

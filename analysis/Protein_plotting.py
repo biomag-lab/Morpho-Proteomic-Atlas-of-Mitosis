@@ -299,3 +299,4 @@ if __name__ == "__main__":
     run_doc_plot_generation(path, file_dvp2, protein_list_file_dvp2, protein_data_dvp2, doc_filename_dvp2,
                             remove_these_phases_from_plots,
                             colors=visualization.colorsforplot, line_color=line_c)
+    

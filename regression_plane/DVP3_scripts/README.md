@@ -1,0 +1,6 @@
+Call order:
+
+convertToJpg
+splitSamplesFromCenter
+dvp3SplitDataset
+dvp3Augmentation
