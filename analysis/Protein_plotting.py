@@ -278,12 +278,12 @@ if __name__ == "__main__":
     path = "./data/"
     # output of proteomics results
 
-    file_dvp2 = "40_mitotic_stages.pg.matrix_67per_rep_imputed_batchcorrected_3_with_geneinformation.txt"
+    protein_data_file = "protein_data_only_validated_proteins.txt"
     # list of significant proteins each row contains a protein example: MDC1
-    protein_list_file_dvp2 = "sig_proteins.csv"
+    significant_protein_list_file = "sig_proteins.csv"
     # This should be an output from gene scape xlsx format
     # protein_data = 'output_reportgenerator_trans_20230413.csv'
-    protein_data_dvp2 = 'DVP2_interesting_GenScrape_output.xlsx'
+    protein_information_file = 'DVP2_interesting_GenScrape_output.xlsx'
     doc_filename_dvp2 = 'dvp2_1-2-3_replicates_gene'
 
     # palette example
@@ -296,7 +296,7 @@ if __name__ == "__main__":
     # if you dont want to remove anythin just uncomment this
     # remove_these_phases_from_plots = []
 
-    run_doc_plot_generation(path, file_dvp2, protein_list_file_dvp2, protein_data_dvp2, doc_filename_dvp2,
+    run_doc_plot_generation(path, protein_data_file, significant_protein_list_file, protein_information_file, doc_filename_dvp2,
                             remove_these_phases_from_plots,
                             colors=visualization.colorsforplot, line_color=line_c)
     
