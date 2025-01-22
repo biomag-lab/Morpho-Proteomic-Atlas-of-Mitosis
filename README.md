@@ -212,9 +212,8 @@ Download the training data for the regression plane from the following link:
 
 Open matlab 2022b
 Navigate into drp project folder
-Download  DRP models from
-10.5281/zenodo.11612600
-
+Download the latest DRP models from
+https://doi.org/10.5281/zenodo.11612600 <br>
 In predictForBIASBulk.m
 
 set the path of the downloaded regression model <br>
