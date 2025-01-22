@@ -106,6 +106,66 @@ Exporter: Exports the data into ACC compatible format for Deep Regression plane(
 
 
 ## Deep regression plane
+
+
+### Training
+
+
+Download training data for regression plane
+https://doi.org/10.5281/zenodo.13896968
+
+
+
+Dataset Preparation
+step 1 
+classification/normalizeIntensities.m
+
+Input Images file
+Output ImgNorm files
+
+step 2 
+applyIntensityNormalization.m
+Inputs: data/Images Folder and  ImgNorm Files 
+Outputs: data/ImagesNormalized images in 8-bit jpg format
+
+step3 
+
+trainingSetSplitter_v3.m
+This script should be run for each data folder 
+Input data/ImagesNormalized
+Outputs files with the following structure to the Target
+Target
+├── Train
+├── Images
+└──*.jpg
+├── Labels
+└──*.tif
+├── Val
+├── Images
+└──*.jpg
+├── Labels
+└──*.tif
+Additionally results in the dataset_nameDensity file
+
+density.m ( i have added)
+
+This file loads each dataset's density container and outputs a total density.mat file
+
+
+createAugmentationsForFilesBalanced_v2_2.m
+
+requires 
+Input density.mat file
+Target Folder with Train val folders
+
+Outputs trainingBALaug 220864 files
+
+
+convertToClassificationFormat
+
+
+
+### Inference
 <br>
 
 Open matlab 2022b
