@@ -49,6 +49,12 @@ Typically it takes 5-6 minutes to download and install each packages
 ## BIAS pipelines
 
 Download the data from: {zenoodo link }
+Proteomics data:
+10.5281/zenodo.11612461
+
+Validation data:
+10.5281/zenodo.11257150
+
 Unzip the data to any folder
 example:
 D:/datasets/Bias_data_DVP2/Proteomics/
@@ -208,6 +214,8 @@ Download the training data for the regression plane from the following link:
 
 Open matlab 2022b
 Navigate into drp project folder
+Download  DRP models from
+10.5281/zenodo.11612600
 
 In predictForBIASBulk.m
 
