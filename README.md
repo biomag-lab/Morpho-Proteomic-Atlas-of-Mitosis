@@ -15,8 +15,6 @@
 
 ## Install BIAS software:
 
-
-
 Download the lite version of the BIAS software from:
 https://single-cell-technologies.com/download/
 
@@ -26,7 +24,7 @@ C:/BIAS/
 
 Run BIAS.exe
 
-Typically 1-2 minutes to unpack the software, no further installion is required.
+Typically it takes 1-2 minutes to unpack the software, no further installion is required.
 
 
 ## Python enviroment
@@ -48,12 +46,11 @@ Typically it takes 5-6 minutes to download and install each packages
 
 ## BIAS pipelines
 
-Download the data from: {zenoodo link }
-Proteomics data:
-10.5281/zenodo.11612461
+Download the dataset: <br>
 
-Validation data:
-10.5281/zenodo.11257150
+Proteomics data: https://doi.org/10.5281/zenodo.11612461
+
+Validation data: https://doi.org/10.5281/zenodo.11257150
 
 Unzip the data to any folder
 example:
