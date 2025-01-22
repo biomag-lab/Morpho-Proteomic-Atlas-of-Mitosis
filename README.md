@@ -115,15 +115,15 @@ Exporter: Exports the data into ACC compatible format for Deep Regression plane(
 
 
 ### Training
-# Training
 
-### Download Training Data
+
+#### Download Training Data
 Download the training data for the regression plane from the following link:  
 [https://doi.org/10.5281/zenodo.13896968](https://doi.org/10.5281/zenodo.13896968)
 
 ---
 
-### Dataset Preparation
+#### Dataset Preparation
 
 1. **Normalize Intensities**  
    Run the script `classification/normalizeIntensities.m`.  
@@ -205,8 +205,9 @@ Download the training data for the regression plane from the following link:
    convertToClassificationFormat('output/Target');
    ```
 
+####  Run training
 
-
+  Run `trainv26.m`
 
 
 ### Inference
