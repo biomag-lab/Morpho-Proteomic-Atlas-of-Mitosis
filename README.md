@@ -11,7 +11,12 @@
 </ul>
  <br>
 
+## Resources
 
+Proteomics data: https://doi.org/10.5281/zenodo.11612461 <br>
+Validation data: https://doi.org/10.5281/zenodo.11257150 <br>
+DRP models: https://doi.org/10.5281/zenodo.11612600 <br>
+DRP training data: https://doi.org/10.5281/zenodo.13896968 <br>
 
 ## Install BIAS software:
 
