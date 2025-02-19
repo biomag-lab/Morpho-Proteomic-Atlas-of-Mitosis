@@ -2,7 +2,7 @@
 % v38: inceptionv3 on updated '2022_v1_zeroPadded_split' dataset (with test set); result val RMSE = 1265, train RMSE = 355
 
 transferLearn = 0;
-% modelName = '/home/koosk/data/data/DRP/resnet50_reg_flora.mat';
+
 
 preTrained = true;
 if preTrained
