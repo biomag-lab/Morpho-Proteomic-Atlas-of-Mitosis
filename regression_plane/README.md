@@ -3,7 +3,13 @@
 
 MATLAB 2022b or later is required
 
+
 Navigate to code folder in MATLAB.
+
+## Download Training Data
+Download the training data for the regression plane from the following link:  
+[https://doi.org/10.5281/zenodo.13896968](https://doi.org/10.5281/zenodo.13896968)
+
 ## Dataset Preparation
 
 1. **Normalize Intensities**  

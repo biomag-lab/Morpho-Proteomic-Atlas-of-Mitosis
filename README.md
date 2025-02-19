@@ -115,15 +115,15 @@ Exporter: Exports the data into ACC compatible format for Deep Regression plane(
 
 ## Deep regression plane
 
+To reproduce the results of the article use the matlab version!
+Alternatively a python implementation is provided on the following link.
+
+https://github.com/grexai/Deep-Regression-plane.git
 
 ### Training
 
 
-#### Download Training Data
-Download the training data for the regression plane from the following link:  
-[https://doi.org/10.5281/zenodo.13896968](https://doi.org/10.5281/zenodo.13896968)
-
-
+See regression_plane/README.md
 
 
 ### Inference
