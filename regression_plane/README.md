@@ -1,23 +1,91 @@
-normalizeIntensities
-save(), or just move the saved mat file
-applyIntensityNormalization
-trainingSetSplitter_v3
+---
+#Regression Plane (MATLAB)
 
-folderenkent van futtatva az osszes mappa adja meg a densityt hogy milyen eloszlasban vannak jelen a regression planen
-save polarPositionContainer values meanwhile, ps1 = sum(polarPositionContainer); ps = ps1+ps2+...; save('./data/density.mat', 'ps')
+MATLAB 2022b or later is required
 
-createAugmentationsForFilesBalanced_v2_2
-# to create test set
-splitTestFromTrain
-# to convert the sets to classification format
-convertToClassificationFormat
+Navigate to code folder in MATLAB.
+## Dataset Preparation
 
+1. **Normalize Intensities**  
+   Run the script `classification/normalizeIntensities.m`.  
+   - **Input**: Images file.  
+   - **Output**: ImgNorm files.  
 
+   ```matlab
+   % Normalize intensities
+   normalizeIntensities('data/Images', 'output/ImgNorm');
+   ```
 
-Inference
-predictforBIASBULK
-test1.m acc folder
-params.
+2. **Apply Intensity Normalization**  
+   Run the script `applyIntensityNormalization.m`.  
+   - **Inputs**:  
+     - `data/Images` folder.  
+     - ImgNorm files.  
+   - **Outputs**:  
+     - `data/ImagesNormalized` folder containing images in 8-bit JPG format.  
 
+   ```matlab
+   % Apply intensity normalization
+   applyIntensityNormalization('data/Images', 'output/ImgNorm', 'data/ImagesNormalized');
+   ```
 
+3. **Split into Training and Validation Sets**  
+   Run the script `trainingSetSplitter_v3.m` for each data folder.  
+   - **Input**: `data/ImagesNormalized`.  
+   - **Outputs**:  
+     - Target folder structure:  
 
+       ```
+       Target/
+       ├── Train/
+       │   ├── Images/
+       │   │   └── *.jpg
+       │   ├── Labels/
+       │       └── *.tif
+       ├── Val/
+           ├── Images/
+           │   └── *.jpg
+           ├── Labels/
+               └── *.tif
+       ```
+
+   - Additionally results in the `dataset_nameDensity` file.  
+
+   ```matlab
+   % Split dataset into train and validation sets
+   trainingSetSplitter_v3('data/ImagesNormalized', 'output/Target');
+   ```
+
+4. **Generate Density File**  
+   Run the script `density.m`.  
+   - **Input**: Target folder.  
+   - **Output**: `total_density.mat` file.  
+
+   ```matlab
+   % Generate density file
+   density('output/Target', 'output/total_density.mat');
+   ```
+
+5. **Create Augmentations**  
+   Run the script `createAugmentationsForFilesBalanced_v2_2.m`.  
+   - **Inputs**:  
+     - `total_density.mat` file.  
+     - Target folder with Train and Val subfolders.  
+   - **Outputs**: Augmented data in the respective folders.  
+
+   ```matlab
+   % Create augmentations
+   createAugmentationsForFilesBalanced_v2_2('output/total_density.mat', 'output/Target');
+   ```
+
+6. **Convert to Classification Format**  
+   Run the script `convertToClassificationFormat.m` to prepare the data for classification.
+
+   ```matlab
+   % Convert to classification format
+   convertToClassificationFormat('output/Target');
+   ```
+
+####  Run training
+
+  Run `trainv38.m`
