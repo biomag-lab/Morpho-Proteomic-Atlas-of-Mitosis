@@ -85,7 +85,7 @@ Download the training data for the regression plane from the following link:
    ```
 
 6. **Convert to Classification Format**  
-   Run the script `convertToClassificationFormat.m` to prepare the data for classification.
+   Run the script `classification/createAnnotatedClasses.m` to prepare the data for classification.
 
    ```matlab
    % Convert to classification format
@@ -93,5 +93,8 @@ Download the training data for the regression plane from the following link:
    ```
 
 ####  Run training
+ Train  inceptionv3 model for regression prediction
 
   Run `trainv38.m`
+  
+Train 

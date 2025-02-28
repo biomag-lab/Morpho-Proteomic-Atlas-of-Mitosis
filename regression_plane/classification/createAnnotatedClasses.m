@@ -1,27 +1,10 @@
-% create annotated dataset with classes
-% inFolder = 'c:\receive\projects\projects\BRC\projects\DVP2\annotations\20x\Images\';
-% inCoordFolder = 'c:\receive\projects\projects\BRC\projects\DVP2\annotations\20x\Labels\';
-% imNormFile = 'c:\receive\projects\projects\BRC\projects\DVP2\annotations\prog\imgNorm20X.mat';
-% outFolder = 'c:\receive\projects\projects\BRC\projects\DVP2\annotations\60x\fourty\';
 
-%v3
-% inFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210617-HelaKyoto-40x-live-frame-2__2021-06-17T15_46_18-Measurement1/Images/';
-% inCoordFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210617-HelaKyoto-40x-live-frame-2__2021-06-17T15_46_18-Measurement1/Labels/';
-% imNormFile = '/home/koosk/work/projects/DRP/classification/imgNorm40X_2.mat';
-% outFolder = '/home/koosk/images-data/class40_v3/train/';
-
-% %v4
-% inFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/split_traj1/val/images/';
-% inCoordFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/split_traj1/val/labels/';
-% imNormFile = '/home/koosk/work/projects/DRP/classification/imgNorm.mat';
-% % outFolder = '/home/koosk/images-data/class40_v4/train/';
-% outFolder = '/home/koosk/images-data/class40_v4/val/';
 
 % v5 with 41 classes (40 mitotic + interphase)
-inFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/Images/';
-inCoordFolder = '/home/koosk/data/data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/Labels/';
-imNormFile = '/home/koosk/work/projects/DRP/classification/imgNorm.mat';
-outFolder = '/home/koosk/images-data/class41/train/';
+inFolder = './data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/Images/';
+inCoordFolder = './data/DRP/Zero_Padded/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/ACC_210912-HK-60x-live__2021-09-12T23_48_01-Measurement4/Labels/';
+imNormFile = './imgNorm.mat';
+outFolder = './images-data/class41/train/';
 
 
 numOutClasses = 40;
