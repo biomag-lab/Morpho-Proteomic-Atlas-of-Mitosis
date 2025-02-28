@@ -97,4 +97,6 @@ Download the training data for the regression plane from the following link:
 
   Run `trainv38.m`
   
-Train 
+Train auxiliary Resnet50 model for discrete classification  
+
+  Run `classificiation/trainclassificiation.m`
