@@ -100,3 +100,13 @@ Download the training data for the regression plane from the following link:
 Train auxiliary Resnet50 model for discrete classification  
 
   Run `classificiation/trainclassificiation.m`
+  
+
+
+---
+###Results
+
+The original model were trained with descripted hyperparameters in the article
+#### MATLAB modell on test set <u>RMSE ~670</u>
+<img src="./regression_plane/documentation_images/matlab_test_ensemble.png" width="350" height="350">
+
