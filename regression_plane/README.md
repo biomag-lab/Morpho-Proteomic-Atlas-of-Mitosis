@@ -10,6 +10,19 @@ Navigate to code folder in MATLAB.
 Download the training data for the regression plane from the following link:  
 [https://doi.org/10.5281/zenodo.13896968](https://doi.org/10.5281/zenodo.13896968)
 
+
+## Data representation
+
+In the article, the data is represented on a circle centered at (5000, 5000). The annotated cells are on a ~4500 Radius circle. Interphase cells are located at 270° ± 15°. The remaining 330° is divided into 40 equal sections, each spanning 8.25°. The phases follow a clockwise (CW) order: Prophase → Prometaphase → Metaphase → Anaphase → Telophase.
+
+See the figure below:
+
+<img src="./Images_documentation/TRAIN_data_Visualization.png" width="600" height="600">
+
+However, in the labels file, Interphase is positioned at 0°–30°, and the remaining phases are arranged in a counterclockwise (CCW) direction from 30° to 360°.
+
+
+
 ## Dataset Preparation
 
 1. **Normalize Intensities**  
@@ -108,5 +121,5 @@ Train auxiliary Resnet50 model for discrete classification
 
 The original model were trained with descripted hyperparameters in the article
 #### MATLAB modell on test set <u>RMSE ~670</u>
-<img src="./regression_plane/documentation_images/matlab_test_ensemble.png" width="350" height="350">
+<img src="./Images_documentation/matlab_test_ensemble.png" width="470" height="350">
 
