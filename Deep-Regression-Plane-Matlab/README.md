@@ -1,14 +1,22 @@
 ---
-#Regression Plane (MATLAB)
+# Regression Plane (MATLAB)
 
 MATLAB 2022b or later is required
 
 
 Navigate to code folder in MATLAB.
 
-## Download Training Data
-Download the training data for the regression plane from the following link:  
-[https://doi.org/10.5281/zenodo.13896968](https://doi.org/10.5281/zenodo.13896968)
+## Download Resourcers
+
+### DRP Raw data<br>
+Preparation required, please run the scripts written in Dataset Preparation section<br>
+https://doi.org/10.5281/zenodo.13896968 <br>
+
+### Prepared dataset
+Doesnet require to run dataset preparation section. This dataset is splitted and augmented training data:<br> https://doi.org/10.5281/zenodo.14945967 <br>
+### Models to reproduce the article's results
+DRP models: https://doi.org/10.5281/zenodo.11612600 <br>
+
 
 
 ## Data representation
@@ -20,7 +28,6 @@ See the figure below:
 <img src="./Images_documentation/TRAIN_data_Visualization.png" width="600" height="600">
 
 However, in the labels file, Interphase is positioned at 0°–30°, and the remaining phases are arranged in a counterclockwise (CCW) direction from 30° to 360°.
-
 
 
 ## Dataset Preparation
