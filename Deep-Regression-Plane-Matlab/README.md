@@ -110,7 +110,8 @@ However, in the labels file, Interphase is positioned at 0°–30°, and the rem
 
   Run `trainv38.m`
   
-Train auxiliary Resnet50 model for discrete classification  
+Train auxiliary Resnet50 73251Xes
+model for discrete classification  
 
   Run `classificiation/trainclassificiation.m`
   

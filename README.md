@@ -13,10 +13,15 @@
 
 ## Resources
 
-Proteomics data: https://doi.org/10.5281/zenodo.11612461 <br>
-Validation data: https://doi.org/10.5281/zenodo.11257150 <br>
+
+
+Proteomics sample data: https://doi.org/10.5281/zenodo.11612461 <br>
+Validation sample data: https://doi.org/10.5281/zenodo.11257150 <br>
 DRP models: https://doi.org/10.5281/zenodo.11612600 <br>
-DRP training data: https://doi.org/10.5281/zenodo.13896968 <br>
+DRP splitted and  augmented training data: https://doi.org/10.5281/zenodo.14945967 <br>
+DRP Raw data: https://doi.org/10.5281/zenodo.13896968 <br>
+
+In  analysis/data folder a sample proteomics data is avaliable
 
 ## Install BIAS software:
 
@@ -208,7 +213,7 @@ This script will generate plots from the selected  features classwise. Each feat
 
 ## Reload Regression plane predictions
 
-In bias....
+In bias,  import  the .csv files from predict4BIAS_bulk folder.
 
 ## Single cell selection and export for isolation
 
@@ -216,10 +221,6 @@ To view the predicted mitotic cells in BIAS open: <br>
 
 cutting-40stgs project 
 contains each the acc predicted 40 mitotic stages
-
-
-
-
 
 Open postprocessing files
 Run dvp2_export.py
@@ -255,38 +256,11 @@ Out of 123 analyzed samples, three were excluded due to insufficient protein gro
 ### Hit Selection
 Proteins with significant expression changes during mitosis were identified using the Kruskal–Wallis test, with false discovery rates (FDR) at 0.1 and 0.05 (Benjamini–Hochberg correction), analyzed in Perseus.
 
+## Visualize proteomic results and validation results
 
-## Visualize proteomic results
-In 
-```
-./analysis
-```
-run "Protein_plotting.py" file
-add necessary parameters
-
-```
-   # path of files
-    path = "./data/"
-    # output of proteomics results
-
-    protein_data_file = "./data/protein_data_only_validated_proteins.txt"
-    # list of significant proteins each row contains a protein example: MDC1
-    significant_protein_list_file = "./data/sig_proteins.csv"
-    # This should be an output from gene scape xlsx format
-    # protein_data = './data/output_reportgenerator_trans_20230413.csv'
-    protein_information_file = 'DVP2_interesting_GenScrape_output.xlsx'
-    doc_filename_dvp2 = 'dvp2_1-2-3_replicates_gene'
-
-    # palette example
-    # dots = [(0, 255, 0), (0, 255, 100), (0, 255, 0), (0, 255, 50)]
-    # single color example
-    dots = [(0, 255, 0)]
-    # line color
-    line_c = (0, 0, 0)
-    # this will remove unnecessary from the visualization
-    remove_these_phases_from_plots = []
-```
-
+Go to analysis folder and run ```Protein_plotting.py``` to create visualization of the sample proteomics results
+Run  ```export_features_plots_small_crops.py``` to export cell features into .csv file.
+Use ```generate_intensity_plots.py``` to visualize the protein validation results.
 
 
 
