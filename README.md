@@ -26,7 +26,9 @@ In  analysis/data folder a sample proteomics data is avaliable
 ## Install BIAS software:
 
 Download the lite version of the BIAS software from:
-https://single-cell-technologies.com/download/
+[https://single-cell-technologies.com/download/](SCT downloads)
+or 
+[https://drive.google.com/drive/folders/12W4R50-VPS--7puYdBNui0KkbTvHpj6j](Drive link)
 
 Unzip the bias_win_lite_v1.1.0.zip (version might change) into a desired folder eg:
 
